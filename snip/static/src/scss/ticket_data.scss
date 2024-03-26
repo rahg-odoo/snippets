@@ -1,0 +1,22 @@
+.container {
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.property_card {
+    width: 400px;
+    height:200px;
+    margin: 10px 10px;
+    color: black;
+    transition: transform .3s ease;
+}
+
+.property_card:hover {
+    text-decoration: none;
+    transform: scale(1.02)
+    
+}
+
+.card-body {
+    padding: 2rem 1rem
+}

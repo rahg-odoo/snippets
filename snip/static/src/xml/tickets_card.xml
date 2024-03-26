@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+    <t t-name="snip.this_will_replace">
+        <div class="container">
+            <div id="replacing_with_other_div" class="row brow-cols-3">
+                <t t-foreach="tickets" t-as="ticket" t-key="ticket.id">
+                    <a class="property_card p-0">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 t-out="ticket['name']"></h4>
+                                <div>
+                                    <strong>Priority :</strong>
+                                    <span t-out="ticket['priority']"></span>
+                                </div>
+                                <div>
+                                    <strong>Customer :</strong>
+                                    <h5 t-out="ticket['partner_id'][1]"></h5>
+                                </div>
+                                <div>
+                                    <strong>Assigned To :</strong>
+                                    <h5 t-out="ticket['user_id'][1]"></h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </a>
+                </t>
+            </div>
+        </div>
+    </t>
+</templates>

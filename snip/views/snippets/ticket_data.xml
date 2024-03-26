@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="basic_snippet" name="Dynamic Snippettt">
+        <section class="container row my-4 mx-auto dynamic_snippet_blog">
+            <div id="replacing_with_other_div container">
+            </div>
+        </section>
+    </template>
+
+
+    <template id="external_snippets" inherit_id="website.snippets" priority="8">
+        <xpath expr="//div[@id='snippet_effect']//t[@t-snippet][last()]" position="after">
+            <t t-snippet="snip.basic_snippet"/>
+        </xpath>
+    </template>
+
+</odoo>
